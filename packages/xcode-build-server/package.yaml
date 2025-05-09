@@ -10,9 +10,13 @@ categories:
   - LSP
 
 source:
-  id: pkg:github/SolaWing/xcode-build-server@v1.1.0
-  build:
-    run: "echo already built"
-
+  id: pkg:github/SolaWing/xcode-build-server@v1.2.0
+  asset:
+    - target: darwin_arm64
+      file: "{{ version }}.tar.gz"
+      bin: xcode-build-server
+    - target: darwin_x64
+      file: "{{ version }}.tar.gz"
+      bin: xcode-build-server
 bin:
   xcode-build-server: xcode-build-server
